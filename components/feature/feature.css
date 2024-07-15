@@ -1,0 +1,50 @@
+.gpt3__features-container__feature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    
+    margin: 1rem;
+    
+    padding-left: 8rem;
+}
+
+.gpt3__features-container__feature-title {
+    flex: 1;
+    
+    margin-right: 2rem;
+}
+
+.gpt3__features-container__feature-title h1 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    
+}
+
+.gpt3__features-container__feature-title div {
+    width: 38px;
+    height: 3px;
+    background: var(--gradient-bar);
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    margin-bottom: 0.25rem;
+}
+
+
+@media screen and (max-width: 320px) {
+    .gpt3__features-container__feature-title h1 {
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow text */
+        text-overflow: ellipsis; /* Add ellipsis for overflow text */
+        font-size: 20px; /* Adjust font size */
+        line-height: 24px; /* Adjust line height */
+        margin-left: 2px;
+    }
+    .gpt3__features-container__feature {
+        margin-right: 26rem; /* Adjust margin */
+    }
+}
