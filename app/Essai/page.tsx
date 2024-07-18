@@ -7,13 +7,13 @@ const Page = async() => {
   const user = await getUser()
 
   if (!user || !user.id) redirect('/callback?origin=Essai')
-      const dbUser = await db.user.findFirst({
-          where: {
-            id: user.id
-          }
-        })
-      
-        if(!dbUser) redirect('/callback?origin=Essai')
+    const dbUser = await db.user.findFirst({
+        where: {
+          id: user.id
+        }
+      })
+    
+      if(!dbUser) redirect('/callback?origin=Essai')
         
     return <Dashboard/>
 }
