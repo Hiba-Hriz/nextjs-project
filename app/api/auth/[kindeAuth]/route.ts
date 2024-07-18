@@ -1,5 +1,5 @@
 import { handleAuth } from '@kinde-oss/kinde-auth-nextjs/server'
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(
   request: NextRequest,
@@ -7,14 +7,9 @@ export async function GET(
 ): Promise<Response> {
   const endpoint = params.kindeAuth
   try {
-    const response = await handleAuth(request, endpoint)
-    if (response instanceof Response) {
-      return response
-    } else {
-      // Fallback in case handleAuth returns a different type
-      return new Response(JSON.stringify(response), { status: 200 })
-    }
+    const result = handleAuth(request, endpoint) as unknown as Response
+    return result
   } catch (error) {
-    return new Response('Error handling auth', { status: 500 })
+    return new NextResponse('Error handling auth', { status: 500 })
   }
 }
