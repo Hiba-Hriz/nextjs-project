@@ -1,10 +1,12 @@
 "use client"
 
+import { Suspense } from 'react';
 import { useRouter, useSearchParams } from "next/navigation"
 import { trpc } from "../_trpc/Client";
-import { Loader2 } from 'lucide-react'
 import { HashLoader } from 'react-spinners';
-const Page = () => {
+import { Loader2 } from 'lucide-react';
+
+const PageContent = () => {
     const router = useRouter()
     const searchParams = useSearchParams()
     const origin = searchParams.get('origin')
@@ -34,4 +36,10 @@ const Page = () => {
     )
 }
 
-export default Page
+const Page = () => (
+    <Suspense fallback={<Loader2 className='h-8 w-8 animate-spin text-zinc-800' />}>
+        <PageContent />
+    </Suspense>
+);
+
+export default Page;
