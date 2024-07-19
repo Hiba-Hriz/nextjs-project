@@ -2,7 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation"
 import { trpc } from "../_trpc/Client";
-import { Loader2 } from 'lucide-react'
 import { HashLoader } from 'react-spinners';
 const Page = () => {
     const router = useRouter()
