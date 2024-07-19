@@ -142,9 +142,9 @@ const FeatureSlider: React.FC = () => {
             </h2>
             <MovingRed 
               title={feature.description}
-              icon={<></>} 
-              position=""
-              handleClick={() => {}} 
+              
+              
+              
               otherClasses="text-[16px] lg:text-[20px] flex-grow"
             />
           </div>
