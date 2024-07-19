@@ -30,7 +30,7 @@ const Hero = () => {
       justify-center'>
         <h2 className='uppercase tracking-widest
         text-xs text-center   text-blue-100 max-w-80 -mt-20 md:mt-0'>
-          projets ERP
+          projets ERPtt
         </h2>
         <TextGenerateEffect 
         className='text-center text-3xl
