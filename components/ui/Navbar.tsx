@@ -24,6 +24,7 @@ const Navbar = () => {
                                 variant: 'ghost',
                                 size: 'sm',
                             })+ ' link-hover-effect'} 
+                            scroll={true}
                         >
                             FORMATION
                         </Link>
@@ -33,6 +34,7 @@ const Navbar = () => {
                           variant: 'ghost',
                            size: 'sm',
                             }) + ' link-hover-effect'}
+                            
                           />
                         <Link
                             href='/Contact'
@@ -40,6 +42,7 @@ const Navbar = () => {
                                 variant: 'ghost',
                                 size: 'sm',
                             }) + ' link-hover-effect'}
+                            scroll={true}
                         >
                             CONTACT
                         </Link>

@@ -8,11 +8,11 @@ export async function GET(
   const endpoint = params.kindeAuth
   const result = await handleAuth(request, endpoint)
   
-  // Ensure result is a valid Response
+  
   if (result instanceof NextResponse) {
     return result
   } else {
-    // Handle other possible cases or return an error response
+    
     return NextResponse.error()
   }
 }
