@@ -177,24 +177,7 @@ const Page = () => {
           </Tab.Panels>
         </Tab.Group>
 
-        <motion.div
-          className="relative mt-16"
-          onClick={() => toggleFlip()}
-          variants={flipVariants}
-          initial="initial"
-          animate={isFlipped ? "animate" : "initial"}
-        >
-          <div className="w-48 sm:w-64 h-36 sm:h-48 bg-white rounded-xl shadow-xl mx-auto cursor-pointer">
-            <div className={`absolute inset-0 flex items-center justify-center text-center transition-transform ${isFlipped ? 'rotate-y-180' : ''}`}>
-              <div className="front text-lg sm:text-2xl">
-              
-                Découvrez Octal erp </div>
-              <div className="back text-lg sm:text-2xl absolute inset-0 rotate-0">
-              
-                en cours...</div>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     
     </div>
