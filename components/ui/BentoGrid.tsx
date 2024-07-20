@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Lottie from "react-lottie";
 import { IoCopyOutline } from "react-icons/io5";
@@ -16,7 +16,6 @@ export const BentoGrid = ({
   className?: string;
   children?: React.ReactNode;
 }) => {
-  
 
   return (
     <div
@@ -46,11 +45,11 @@ export const BentoGridItem = ({
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
-  id?:number;
-  img?:string;
-  imgClassName?:string;
-  titleClassName?:string;
-  spareImg?:string;
+  id?: number;
+  img?: string;
+  imgClassName?: string;
+  titleClassName?: string;
+  spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -68,109 +67,107 @@ export const BentoGridItem = ({
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
-  return (
 
+  const shouldShowImgFullCover = id === 1 || id === 3;
+
+  return (
     <div
       className={cn(
         "row-span-3 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
-        backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        background: shouldShowImgFullCover ? "none" : "rgb(4,7,29)",
+        backgroundColor: shouldShowImgFullCover ? "none" : "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
+      {id === 6 && (
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+        </BackgroundGradientAnimation>
+      )}
+      {id === 7 && (
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+        </BackgroundGradientAnimation>
+      )}
 
-
-   
-         { id === 6  && (
-          
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
-        )}
-        { id === 7  && (
-          
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
-        )}
-
-
-
-
-
-
-      <div className='flex
-      justify-center h-full'>
-       <div className="w-full h-full absolute">
-           {img &&(
-            <Image 
-            src={img}
-            alt={img}
-            height={100}
-            width={100}
-            className={cn(imgClassName, 'object-cover',
-              'object-center')}
-            />
-        )}
-       </div>
-       <div className={`absolute right-0 -bottom-5 `}>
-          {spareImg && (
+      <div className="flex justify-center h-full">
+        <div className="w-full h-full absolute">
+          {img && (
             <Image
-            src={spareImg}
-            alt={spareImg}
-           height={200}
-           width={200}
-            className={'object-cover,object-center w-full h-full' }
+              src={img}
+              alt={img}
+              height={200}
+              width={200}
+              className={cn(
+                "object-cover object-center w-full h-full",
+                imgClassName,
+                {
+                  "w-full h-full": shouldShowImgFullCover,
+                }
+              )}
             />
           )}
-
-       </div>
-       
-       
-       
+        </div>
+        <div className={`absolute right-0 -bottom-5`}>
+          {spareImg && (
+            <Image
+              src={spareImg}
+              alt={spareImg}
+              height={200}
+              width={200}
+              className={"object-cover,object-center w-full h-full"}
+            />
+          )}
+        </div>
       </div>
+
       <div className="translate-x-2 transition duration-200">
-      
-      {id === 2 && (
-  <div className="font-sans font-bold text-white dark:text-white  mb-0 mt-0  mr-2 text-center text-1xl">
-    {title}
-  </div>
-)}
-{ id===6  &&  (
-  <div className="font-sans text-white dark:text-white m-2 text-center text-2xl">
-    {title}
-  </div>
-)}
-{ id===7  &&  (
-  <div className="font-sans text-white dark:text-white m-2 text-center text-2xl">
-    {title}
-  </div>
-)}
-{ id===5 &&  (
-  <div className="font-sans text-white dark:text-white m-4 text-center text-2xl">
-    {title}
-  </div>
-)}
-{id !== 2 && id !== 5 && id !== 6 && id !== 7 && (
-  <div className="font-sans font-bold text-black dark:text-black mb-4 mt-2 text-center text-2xl">
-    {title}
-  </div>
-)}
-
-
-{id === 2 && (
-  
-          <div className=" w-full h-full  md:h-96 justify-center flex "> 
-            
-            <GlobeDemo />
+        {id === 2 && (
+          <div className="text-center text-xl md:text-2xl lg:text-3xl text-white font-bold relative z-10">
+            {title}
+          </div>
+        )}
+        {id === 1 && (
+          <div className="font-sans font-bold text-white dark:text-white my-4  mr-2 text-center text-2xl">
+            {title}
+          </div>
+        )}
+        {id === 3 && (
+          <div className="font-sans font-bold text-black dark:text-black m-4 text-center text-2xl">
+            {title}
+          </div>
+        )}
+        {id === 2 && (
+          <div className="w-full h-full md:h-96 flex justify-center items-center relative min-h-[50vh]">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <GlobeDemo />
+            </div>
+          </div>
+        )}
+        {id === 5 && (
+          <div className="font-sans text-white dark:text-white m-4 text-center text-2xl">
+            {title}
+          </div>
+        )}
+        {id === 6 && (
+          <div className="font-sans text-white dark:text-white m-2 text-center text-2xl">
+            {title}
+          </div>
+        )}
+        {id === 7 && (
+          <div className="font-sans text-white dark:text-white m-2 text-center text-2xl">
+            {title}
+          </div>
+        )}
+        {id !== 1 && id !== 2 && id !== 3 && id !== 5 && id !== 6 && id !== 7 && (
+          <div className="font-sans font-bold text-black dark:text-black mb-4 mt-2 text-center text-2xl">
+            {title}
           </div>
         )}
 
-
-        
-         {id === 6  && (
+{id === 6  && (
             <div className=" relative ">
              
               <div

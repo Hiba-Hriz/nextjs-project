@@ -1,37 +1,36 @@
- 
- export const gridItems = [
-    {
-      id: 1,
-      title: "société de conseil et de  service en Management et en Système d’Information",
-      description: "",
-      className: "lg:col-span-2 md:col-span-2 md:row-span-2 lg:min-h-[60vh] ",
-      imgClassName: "w-full h-full",
-      titleClassName: "justify-end",
-      img: "/img1.svg",
-      spareImg: "",
-    },
-    {
-      id: 2,
-      title: "Consultants Tunisiens et Etrangers",
-      description: "",
-      className: "lg:col-span-1 md:col-span-1 lg:row-span-1 md:row-span-1 lg:min-h-[30vh] max-h-[40vh]" ,
-      imgClassName: "",
-      titleClassName: "flex justify-center pt-0 ",
-      img: "",
-      spareImg: "",
-    },
-    {
-      id: 3,
-      title: "fondée en 1995, 24 ans de consulting et de service d’Agilité des Entreprises",
-      description: "",
-      className: "lg:col-span-1 md:col-span-1 lg:row-span-1 md:row-span-1 lg:min-h-[30vh] ",
-      imgClassName: "w-full h-full",
-      titleClassName: " ",
-      img: "/img3.svg",
-      spareImg: "",
-    },
-    
-  ];
+export const gridItems = [
+  {
+    id: 1,
+    title: "société de conseil et de  service en Management et en Système d’Information",
+    description: "",
+    className: "lg:col-span-2 md:col-span-2 md:row-span-2 lg:min-h-[60vh] ",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-end",
+    img: "/img1.svg",
+    spareImg: "",
+  },
+  {
+    id: 2,
+    title: "Consultants Tunisiens et Etrangers",
+    description: "",
+    className: "lg:col-span-1 md:col-span-1 lg:row-span-1 md:row-span-1 lg:min-h-[30vh] max-h-[40vh]" ,
+    imgClassName: "",
+    titleClassName: "flex justify-center pt-0 ",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 3,
+    title: "fondée en 1995, 24 ans de consulting et de service d’Agilité des Entreprises",
+    description: "",
+    className: "lg:col-span-1 md:col-span-1 lg:row-span-1 md:row-span-1 lg:min-h-[30vh] ",
+    imgClassName: "w-full h-full",
+    titleClassName: " ",
+    img: "/img3.svg",
+    spareImg: "",
+  },
+  
+];
   
   export const workExperience = [
     {
