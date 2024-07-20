@@ -48,7 +48,7 @@ const NavbarClient = () => {
                                     OCTAL ERP
                                 </Link>
                             
-                                <Link href="/sign-in" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-200">
+                                <Link href="/Solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-200">
                                     OCTAL SOLUTIONS
                                 </Link>
                                 

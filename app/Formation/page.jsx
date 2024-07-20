@@ -148,7 +148,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="">
+    <main className="overflow-hidden">
       {loading ? (
         <div className="flex justify-center items-center h-screen">
           <HashLoader size={50} color={"#123abc"} loading={loading} />
@@ -184,7 +184,7 @@ const Home = () => {
             </div>
             <div className="gpt3__features-container">
               {featuresData.map((item, index) => (
-                <Feature key={index} title={<span dangerouslySetInnerHTML={{ __html: item.title }} />} />
+                <Feature key={index} title={<span  dangerouslySetInnerHTML={{ __html: item.title }} />} />
               ))}
             </div>
           </div>
