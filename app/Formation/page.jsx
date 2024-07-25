@@ -44,6 +44,35 @@ const featuresData = [
     title: 'Word 2013 : prise en main <br/>et perfectionnement',
   },
 ];
+
+const javaparagraph = [
+  {
+    title: '- Programmation JAVA et conception objet Eclipse (5 j) <br />',
+  },
+  {
+    title: '- Développer avec Eclipse (5 j)<br />'
+  },
+  {
+    title: '- Développer avec Eclipse (5 j)<br />',
+  },
+  {
+    title: '- Swing, développement des applications JAVA (5 j)<br />',
+  },
+  {
+    title: '- Développer avec Python (5 j)<br />',
+  },
+  {
+    title: '- Création d’application web d’entreprise avec JEE et Oracle Weblogic (3 j)<br />',
+  },
+  {
+    title: '- Création d’application web d’entreprise avec JEE et GLASSFISH (3 j)<br />',
+  },
+  {
+    title: '- Maîtriser Java sans connaitre la programmation orientée objet (5 j)',
+  },
+];
+
+
 const Data = [
   {
     title: 'Introduction au CMMI (3 j)',
@@ -94,6 +123,7 @@ const lTIL = [
   },
   
 ];
+
 const bd = [
   {
     title: 'Administration avancée de<br> MySQL (2 j)',
@@ -184,49 +214,19 @@ const Home = () => {
             </div>
             <div className="gpt3__features-container">
               {featuresData.map((item, index) => (
-                <Feature key={index} title={<span  dangerouslySetInnerHTML={{ __html: item.title }} />} />
+                <Feature key={index} title={<span dangerouslySetInnerHTML={{ __html: item.title }} />} />
               ))}
             </div>
           </div>
 
-          <div className="d-flex align-items-center justify-content-between">
-            <div className='container'>
-              <div className="">
-                <div className="containergif stars-container">
-                  <Image src={vlogger} alt="" className="animated-gif" unoptimized width={100} height={50} />
-                  <Image src={vlogger} alt="" className="animated-gif middle" unoptimized width={100} height={50} />
-                  <Image src={vlogger} alt="" className="animated-gif" unoptimized width={100} height={50} />
-                </div>
-                <h1 className="text-gradient text-4xl text-light font-bold">Développement Java, JEE</h1>
-              </div>
-              <br />
-              <p className="py-6 text-light text-3xl pl-4 mr-2 text-white">
-                - Programmation JAVA et conception objet Eclipse (5 j)
-                <br />
-                - Développer avec Eclipse (5 j)<br />
-                - Développer avec Eclipse (5 j)<br />
-                - Swing, développement des applications JAVA (5 j)<br />
-                - Développer avec Python (5 j)<br />
-                - Création d’application web d’entreprise avec JEE et Oracle Weblogic (3 j)<br />
-                - Création d’application web d’entreprise avec JEE et GLASSFISH (3 j)<br />
-                - Maîtriser Java sans connaitre la programmation orientée objet (5 j)
-              </p>
-            </div>
-            <div className="cover">
-              <Image src={java} alt="" className="height: 250px" />
-            </div>
-          </div>
+          
 
-
-
-
-          <div className="gpt3__features section__padding " id="offres">
+          <div className="gpt3__features section__padding">
             <div className="gpt3__features-heading">
               <div className="">
-              <Image src={management} alt="" className=" moveUpDown" width={150} height={50} />
+                <Image src={management} alt="" className=" moveUpDown" width={150} height={50} />
               </div>
-              <h1 className='text-gradient text'>
-              Management de SI</h1>
+              <h1 className='text-gradient text'>Management de SI</h1>
             </div>
             <div className="gpt3__features-container">
               {Data.map((item, index) => (
@@ -235,10 +235,31 @@ const Home = () => {
             </div>
           </div>
 
+
+          <div className="gpt3__features section__padding">
+            <div className="gpt3__features-heading">
+              <div className=" stars-container">
+                <Image src={vlogger} alt="" className="animated-gif" unoptimized width={100} height={50} />
+                <Image src={vlogger} alt="" className="animated-gif middle" unoptimized width={100} height={50} />
+                <Image src={vlogger} alt="" className="animated-gif" unoptimized width={100} height={50} />
+              </div>  
+                <h1 className='text-gradient text'>Développement Java, JEE</h1>
+              </div>
+              <div className="gpt3__features-container z-10">
+                {javaparagraph.map((item, index) => (
+                  <Feature key={index} title={<span dangerouslySetInnerHTML={{ __html: item.title }} />} />
+                ))}
+            </div>
+            <div className="cover mt-6 ">
+              <Image src={java} alt="Java Development" style={{ height: '250px', width:'250px' }} />
+            </div>
+          </div>
+
+
           <div className="gpt3__features section__padding" id="offres">
             <div className="gpt3__features-heading">
               <div className="stars-container">
-                <Image src={itil} alt="" className="rotateBackForth " width={200} height={100} />
+                <Image src={itil} alt="" className="rotateBackForth" width={200} height={100} />
               </div>
               <h1 className='text-gradient text'>Management de lTIL</h1>
             </div>
@@ -252,11 +273,9 @@ const Home = () => {
           <div className="gpt3__features section__padding" id="offres">
             <div className="gpt3__features-heading">
               <div className="stars-container">
-              <Image src={Oracle} alt="" className="jumpUpRight " width={100} height={100} />
-<Image src={dba} alt="" className="jumpUpRight " width={100} height={100} />
-<Image src={mysql} alt="" className="jumpUpRight " width={100} height={100} />
-
-
+                <Image src={Oracle} alt="" className="jumpUpRight" width={100} height={100} />
+                <Image src={dba} alt="" className="jumpUpRight" width={100} height={100} />
+                <Image src={mysql} alt="" className="jumpUpRight" width={100} height={100} />
               </div>
               <h1 className='text-gradient text'>Oracle, MySQL, PostgreSQL, SQL Server</h1>
             </div>
