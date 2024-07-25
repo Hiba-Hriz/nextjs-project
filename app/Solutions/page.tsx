@@ -1,11 +1,11 @@
 "use client";
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
+import { HashLoader } from 'react-spinners';
 import { motion, useAnimation, Variants, MotionProps } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Tab } from '@headlessui/react';
 import Footer from "@/components/Footer";
 
-// Define the animations
 const fadeInUp: Variants = {
   initial: { opacity: 0, y: 60 },
   animate: {
@@ -39,7 +39,6 @@ const hoverEffect = {
   },
 };
 
-// Combine all the motion.div props with the custom ones
 type AnimatedDivProps = MotionProps & {
   children: ReactNode;
   className?: string;
@@ -63,7 +62,19 @@ const AnimatedDiv: React.FC<AnimatedDivProps> = ({ children, ...props }) => {
 };
 
 const Page = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
+    <main>
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <HashLoader size={50} color={"#123abc"} loading={loading} />
+        </div>
+      ) : (
     <div className="bg-blue-900 text-white min-h-screen overflow-hidden">
       <div className="container mx-auto p-8 font-sans">
         <AnimatedDiv className="relative z-10" variants={stagger}>
@@ -218,6 +229,8 @@ Dotée d’un puissant configurateur taille/colorie, la solution confection assu
       </div>
       <Footer />
     </div>
+      )}
+    </main>
   );
 };
 
