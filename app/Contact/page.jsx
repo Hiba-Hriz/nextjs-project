@@ -15,7 +15,7 @@ const ContactInfoItem = ({ text, imageSrc }) => (
     <div className={`w-[64px] h-[64px] rounded-full flex justify-center items-center bg-white mb-2`}>
       <Image src={imageSrc} alt="icon" height={100} width={100} className="w-[100%] h-[100%] object-contain" />
     </div>
-    <p className="contact-line text-white font-bold text-center">{text}</p>
+    <p className=" mt-5 text-[19px] text-white font-bold ">{text}</p>
   </div>
 );
 const Home = () => {

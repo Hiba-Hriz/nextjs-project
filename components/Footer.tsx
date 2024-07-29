@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className='w-full pt-20 pb-10' id='contacts'>
         <div className='flex flex-col items-center'>
-            <h1 className=' text-2xl mx-1 text-center text-black text-bold '>
+            <h1 className=' text-3xl mx-1 text-center text-black text-bold '>
             Spécialité dans la sauvegarde et la récupération des données et à l’installation des caméras de surveillance. 
                
                 </h1>

@@ -8,11 +8,7 @@ import Footer from "@/components/Footer";
 
 const fadeInUp: Variants = {
   initial: { opacity: 0, y: 60 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const stagger: Variants = {
@@ -25,18 +21,11 @@ const stagger: Variants = {
 
 const cardVariants: Variants = {
   initial: { opacity: 0, scale: 0.9 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.4, ease: "easeOut" },
-  },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 const hoverEffect = {
-  whileHover: {
-    scale: 1.05,
-    transition: { duration: 0.3, ease: "easeOut" },
-  },
+  whileHover: { scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } },
 };
 
 type AnimatedDivProps = MotionProps & {
@@ -48,7 +37,7 @@ const AnimatedDiv: React.FC<AnimatedDivProps> = ({ children, ...props }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start('animate');
     }
@@ -60,6 +49,100 @@ const AnimatedDiv: React.FC<AnimatedDivProps> = ({ children, ...props }) => {
     </motion.div>
   );
 };
+
+const sections = [
+  {
+    title: 'Octal Décisionnel',
+    content: (
+      <motion.div variants={cardVariants} className="text-base sm:text-3xl">
+        <p className="mb-4 text-xl">
+          La Solution Octal-Décisionnel permet de façon transversale d’intégrer des indicateurs au sein même des écrans d’Octal ERP,
+          de créer des alertes, des tableaux de bord et des visualisations graphiques sur les données de production.
+        </p>
+        <p className="mb-4 text-xl">
+          Ces mêmes données peuvent être analysées avec les outils d’infocentre tels que BO, Cognos ou avec les nouveaux outils ORACLE,
+          préconisés par AXIN que sont les outils d’Oracle® Business Intelligence.
+        </p>
+        <p className='text-xl'>
+          Parmi ces outils Oracle, AXIN met en œuvre tout particulièrement Oracle Discoverer qui permet aux utilisateurs de construire
+          et d’actualiser de façon dynamique et en temps réel des tableaux de bord pour prendre les bonnes décisions grâce aux analyses
+          dynamiques multi-axes.
+        </p>
+      </motion.div>
+    ),
+  },
+  {
+    title: 'Octal Connexion',
+    content: (
+      <motion.div variants={cardVariants} className="text-base sm:text-3xl">
+        <p className="mb-4 text-xl">
+          Dans le cadre d’une organisation en plusieurs sociétés au sein même d’Octal ERP, les flux multi-sociétés tels que commandes
+          fournisseurs-clients, livraison-réception et de facturations peuvent être automatisés.
+        </p>
+        <p className="mb-4 text-xl">
+          Dans un contexte avec des applications hétérogènes, nous mettons en œuvre une solution d’échange de type EAI (Enterprise
+          Application Integration) et plus particulièrement celle de notre partenaire technologique.
+        </p>
+        <p className='text-xl'>
+          Un autre volet d’Octal Connexion est l’EDI (Electronic Data Interchange) qui permet l’échange automatique depuis les marchés
+          clients, constitués de données prévisionnelles et fermes, et les commandes clients jusqu’aux livraisons et facturations clients.
+        </p>
+      </motion.div>
+    ),
+  },
+  {
+    title: 'Octal Code à Barres',
+    content: (
+      <motion.div variants={cardVariants} className="text-base sm:text-3xl">
+        <p className="mb-4 text-xl">
+          La Solution Octal Code à Barres permet, au sein même d’Octal ERP, de paramétrer des scénarios de suivi de production allant de
+          la présence et/ou prise de poste jusqu’à la déclaration de production avec traçabilité des numéros de séries et/ou lots, personne,
+          équipe ou machine ayant réalisée les opérations. Des lecteurs Code à Barres avec système d’exploitation Windows CE permettent
+          également et en temps réel, via une connexion Wi-fi, de compléter la gamme d’outils pour fiabiliser, simplifier les transactions
+          répétitives et, indirectement, améliorer les taux de services aux clients.
+          <br />
+          Les principales fonctionnalités de cette solution concerne les processus suivants :
+          <br />
+          <p className='font-bold'>Suivi de production</p>
+          ◊ Temps présence, hors/de production par OF ou groupe d’OF<br/>
+          ◊ Consommation et Fabrication
+          <br/>
+          <p className='font-bold'>Contrôle expédition</p>
+          ◊ Colisage
+          <br/>
+          ◊ Gestion des bons de préparation
+          <br/>
+          Gestion de stock
+          <br/>
+          ◊ Gestion des inventaires
+          <br/>
+          ◊ Mouvements d’Entrée/Sortie et de transfert de stock
+          <br/>
+        </p>
+      </motion.div>
+    ),
+  },
+  {
+    title: 'Solutions Métiers',
+    content: (
+      <motion.div variants={cardVariants} className="text-base sm:text-3xl">
+        <p className="mb-4 text-xl">
+          Toutes nos solutions métiers se basent sur la dernière version d’Octal ERP pour bénéficier de la même manière de la richesse des fonctionnalités transversales.
+          <br /> Jusqu’à aujourd’hui, deux grands domaines d’activité se dégagent du standard Octal :
+          <br /> ◊ Bâtiment et Travaux Public (BTP)
+          <br /> ◊ Confection
+          <br />
+          <p className='font-bold'>Octal BTP</p>
+          Depuis la gestion des devis techniques, appelés plus communément Débours, en passant par le réapprovisionnement direct des chantiers, en termes de marchandises et matériels et ceci jusqu’à la gestion et la facturation des situations.
+          <br /> Pour une optimisation et un suivi en temps réel des affaires, AXIN propose une solution de géolocalisation de la flotte intervenant sur les chantiers.
+          <br />
+          <p className='font-bold'>Octal Confection</p>
+          Dotée d’un puissant configurateur taille/colorie, la solution confection assure le suivi de production avec une traçabilité par paquet.
+        </p>
+      </motion.div>
+    ),
+  },
+];
 
 const Page = () => {
   const [loading, setLoading] = useState(true);
@@ -133,99 +216,29 @@ const Page = () => {
           </div>
         </AnimatedDiv>
 
-        <div className="container mx-auto mt-8 sm:mt-20">
-          <Tab.Group>
-            <Tab.List className="flex flex-wrap p-1 space-x-2 rounded-xl bg-purple-200">
-              {['Octal Décisionnel', 'Octal Connexion', 'Octal Code à Barres', 'Solutions Métiers'].map((tab) => (
-                <Tab key={tab} className={({ selected }) =>
-                  selected
-                    ? 'flex-1 py-2.5 text-base sm:text-xl leading-5 font-medium text-black bg-white shadow rounded-lg'
-                    : 'flex-1 py-2.5 text-base sm:text-xl leading-5 font-medium text-black rounded-lg'
-                }>
-                  {tab}
-                </Tab>
-              ))}
-            </Tab.List>
+        
 
-            <Tab.Panels>
-              <Tab.Panel>
-                <AnimatedDiv variants={fadeInUp} className="mt-8 p-4 sm:p-6 bg-white rounded-xl shadow-xl text-black">
-                  <h1 className="text-2xl sm:text-4xl font-extrabold mb-4">Octal Décisionnel</h1>
-                  <motion.p variants={cardVariants} className="mb-4 text-base sm:text-3xl">
-                    La Solution Octal-Décisionnel permet de façon transversale d’intégrer des indicateurs au sein même des écrans d’Octal ERP, 
-                    de créer des alertes, des tableaux de bord et des visualisations graphiques sur les données de production.  <br/>
-                    Ces mêmes données peuvent être analysées avec les outils d’infocentre tels que BO, Cognos ou avec les nouveaux outils ORACLE, 
-                    préconisés par AXIN que sont les outils d’Oracle® Business Intelligence permettant d’obtenir une plus grande visibilité 
-                    et une meilleure analyse des activités de votre entreprise. Parmi ces outils Oracle, AXIN met en œuvre tout particulièrement 
-                    Oracle Discoverer qui permet aux utilisateurs de construire et d’actualiser de façon dynamique et en temps réel des tableaux de bord 
-                    pour prendre les bonnes décisions grâce aux analyses dynamiques multi-axes.
-                  </motion.p>
-                </AnimatedDiv>
-              </Tab.Panel>
-              <Tab.Panel>
-                <AnimatedDiv variants={fadeInUp} className="mt-8 p-4 sm:p-6 bg-white rounded-xl shadow-xl text-black">
-                  <h1 className="text-2xl sm:text-4xl font-extrabold mb-4">Octal Connexion</h1>
-                  <motion.p variants={cardVariants} className="mb-4 text-base sm:text-3xl">
-                  Dans le cadre d’une organisation en plusieurs sociétés au sein même d’Octal ERP, les flux multi-sociétés tels que commandes fournisseurs-clients, livraison-réception et de facturations peuvent être automatisés. <br/>
- 
 
- Dans le cadre d’une organisation en plusieurs sociétés au sein même d’Octal ERP, les flux multi-sociétés tels que commandes fournisseurs-clients, livraison-réception et de facturations peuvent être automatisés. <br/>
-  
- 
- Dans un contexte avec des applications hétérogènes, nous mettons en œuvre une solution d’échange de type EAI ( Enterprise Application Integration ) et plus particulièrement celle de notre partenaire technologique 
- Un autre volet d’Octal Connexion est l’EDI ( Electronic Data Interchange ) qui permet l’échange automatique depuis les marchés clients, constitués de données prévisionnelles et fermes, et les commandes clients jusqu’aux livraisons et facturations clients. <br/>
-  
- 
- D ‘autres formes d’échanges existent telles que l’intégration automatique, via le module GED ( Gestion Electronique de Document ) d’Octal ERP, de plans ou documents scannés, la lecture automatique de factures fournisseurs, etc …
-                  </motion.p>
-                </AnimatedDiv>
-              </Tab.Panel>
-              <Tab.Panel>
-                <AnimatedDiv variants={fadeInUp} className="mt-8 p-4 sm:p-6 bg-white rounded-xl shadow-xl text-black">
-                  <h1 className="text-2xl sm:text-4xl font-extrabold mb-4">Octal Code à Barres</h1>
-                  <motion.p variants={cardVariants} className="mb-4 text-base sm:text-3xl">
-                  La Solution Octal Code à Barres permet, au sein même d’Octal ERP, de paramétrer des scénarios de suivi de production allant de la présence et/ou prise de poste jusqu’à la déclaration de production avec traçabilité des numéros de séries et/ou lots, personne, équipe ou machine ayant réalisée les opérations.
-Des lecteurs Code à Barres avec système d’exploitation Windows CE  permettent également  et en temps réel, via une connexion Wi-fi, de compléter la gamme d’outils pour fiabiliser, simplifier les transactions répétitives et, indirectement, améliorer les taux de services aux clients.
-<br/>
-Les principales fonctionnalités de cette solution concerne les processus suivants :
-<br/>
-<p className='font-bold'>
-Suivi de production <br/> </p>
-◊ Temps présence, hors/de production par OF ou groupe d’ OF <br/>
-◊ Consommation et Fabrication <br/>
-<p className='font-bold'>
-Contrôle expédition <br/></p>
-◊ Colisage<br/>
-◊ Gestion des bons de préparation<br/>
-Gestion de stock<br/>
-◊ Gestion des inventaires<br/>
-◊ Mouvements d’Entrée/Sortie et de transfert de stock<br/>
-                  </motion.p>
-                </AnimatedDiv>
-              </Tab.Panel>
-              <Tab.Panel>
-                <AnimatedDiv variants={fadeInUp} className="mt-8 p-4 sm:p-6 bg-white rounded-xl shadow-xl text-black">
-                  <h1 className="text-2xl sm:text-4xl font-extrabold mb-4">Solutions Métiers</h1>
-                  <motion.p variants={cardVariants} className="mb-4 text-base sm:text-3xl">
-                  Toutes nos solutions métiers se basent sur la dernière version d’ Octal ERP pour bénéficier de la même manière de la richesse des fonctionnalités transversales.
-                  <br/>
-Jusqu’à aujourd’hui, deux grands domaines d’activité se dégagent du standard Octal :
-<br/>
-◊ Bâtiment et Travaux Public ( BTP ) <br/>
-◊ Confection<br/>
-<p className='font-bold'>
-Octal BTP<br/></p>
-Depuis la gestion des devis techniques, appelés plus communément Débours, en passant par le réapprovisionnement direct des chantiers, en terme de marchandises et matériels et ceci jusqu’à la gestion et la facturation des situations. <br/>
-Pour une optimisation et un suivi en temps réel des affaires, AXIN propose une solution de géolocalisation de la flotte intervenant sur les chantiers. <br/>
-<p className='font-bold'>
-Octal Confection <br/>   </p>
-Dotée d’un puissant configurateur taille/colorie, la solution confection assure le suivi de production avec une traçabilité par paquet.
-                  </motion.p>
-                </AnimatedDiv>
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
-        </div>
+        <AnimatedDiv className="container mx-auto mt-8 sm:mt-20 text-black" variants={fadeInUp}>
+      {sections.map((section, index) => (
+        <motion.section
+          key={index}
+          initial="initial"
+          animate="animate"
+          variants={fadeInUp}
+          className="py-12 -mx-10 bg-white mb-12 rounded-lg shadow-lg"
+        >
+          <AnimatedDiv className="px-4 sm:px-8 lg:px-12" variants={fadeInUp}>
+            <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 text-center ">{section.title}</h2>
+            {section.content}
+          </AnimatedDiv>
+        </motion.section>
+      ))}
+    </AnimatedDiv>
+
+
+
+
       </div>
       <Footer />
     </div>
