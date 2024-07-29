@@ -214,7 +214,7 @@ const Home = () => {
             </div>
             <div className="gpt3__features-container">
               {featuresData.map((item, index) => (
-                <Feature key={index} title={<span dangerouslySetInnerHTML={{ __html: item.title }} />} />
+                <Feature key={index} title={<span  dangerouslySetInnerHTML={{ __html: item.title }} />} />
               ))}
             </div>
           </div>
