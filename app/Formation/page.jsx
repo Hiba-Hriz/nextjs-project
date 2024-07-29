@@ -47,7 +47,7 @@ const featuresData = [
 
 const javaparagraph = [
   {
-    title: '- Programmation JAVA et conception objet Eclipse (5 j) <br />',
+    title: '- Programmation JAVA et <br> conception objet Eclipse (5 j) <br />',
   },
   {
     title: '- Développer avec Eclipse (5 j)<br />'
@@ -56,19 +56,19 @@ const javaparagraph = [
     title: '- Développer avec Eclipse (5 j)<br />',
   },
   {
-    title: '- Swing, développement des applications JAVA (5 j)<br />',
+    title: '- Swing, développement des <br> applications JAVA (5 j)<br />',
   },
   {
     title: '- Développer avec Python (5 j)<br />',
   },
   {
-    title: '- Création d’application web d’entreprise avec JEE et Oracle Weblogic (3 j)<br />',
+    title: '- Création d’application web <br> d’entreprise avec JEE et Oracle <br> Weblogic (3 j)<br />',
   },
   {
-    title: '- Création d’application web d’entreprise avec JEE et GLASSFISH (3 j)<br />',
+    title: '- Création d’application web <br> d’entreprise avec JEE et <br> GLASSFISH (3 j)<br />',
   },
   {
-    title: '- Maîtriser Java sans connaitre la programmation orientée objet (5 j)',
+    title: '- Maîtriser Java sans connaitre <br> la programmation orientée objet <br> (5 j)',
   },
 ];
 
@@ -107,10 +107,10 @@ const lTIL = [
     title: 'ITIL Foundation (3 j)',
   },
   {
-    title: 'ITIL Intermidiate Capability :<br> Opération Support & Analysis<br> (OSA) (5 j)',
+    title: 'ITIL Intermidiate Capability:<br> Opération Support & Analysis<br> (OSA) (5 j)',
   },
   {
-    title: 'ITIL Intermidiate Capability :<br> Service Offering and Agreement<br> (OSA)(5 j)',
+    title: 'ITIL Intermidiate Capability: <br> Service Offering and Agreement<br> (OSA)(5 j)',
   },
   {
     title: 'ITIL Intermidiate Lifecycle :<br> Service Transition (ST) (5 j)',
@@ -126,13 +126,13 @@ const lTIL = [
 
 const bd = [
   {
-    title: 'Administration avancée de<br> MySQL (2 j)',
+    title: 'Administration avancée de MySQL <br> (2 j)',
   },
   {
-    title: 'Administration base de données<br> Oracle 12c (5 j)',
+    title: 'Administration base de données <br> Oracle 12c (5 j)',
   },
   {
-    title: 'Oracle 12c – Les fondamentaux<br> (5 j)',
+    title: 'Oracle 12c – Les fondamentaux (5 j)',
   },
   {
     title: 'Sauvegarde et restauration<br> d’Oracle 12c (4 j)',
@@ -141,19 +141,19 @@ const bd = [
     title: 'Mise en place d’oracle 12c (2 j)',
   },
   {
-    title: 'Interroger des bases de <br>données avec le langage SQL<br> (3 j)',
+    title: 'Interroger des bases de données <br> avec le langage SQL (3 j)',
   },
   {
-    title: 'Administration Oracle 10g 11g<br> (5 j)',
+    title: 'Administration Oracle 10g 11g (5 j)',
   },
   {
-    title: 'Administrateur base de<br> données Oracle 11g (5 j)',
+    title: 'Administrateur base de données <br> Oracle 11g (5 j)',
   },
   {
     title: 'Oracle Optimisation (3 j)',
   },
   {
-    title: 'Oracle : Débuter avec Oracle ,<br> les bases (5 j)',
+    title: 'Oracle: Débuter avec Oracle, les <br> bases (5 j)',
   },
   {
     title: 'Administrer MySQL (5 j)',

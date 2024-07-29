@@ -5,7 +5,7 @@ const Feature = ({ title }) => (
   <div className="gpt3__features-container__feature">
     <div className="gpt3__features-container__feature-title">
       <div />
-      <h1 >{title}</h1>
+      <h1 className='text-start '>{title}</h1>
     </div>
     
 
