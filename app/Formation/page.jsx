@@ -23,52 +23,52 @@ const featuresData = [
     title: 'Excel 2013 : Prise main (1 j )',
   },
   {
-    title: 'Excel 2013 : Perfectionnement<br>(2 j)',
+    title: 'Excel 2013 : Perfectionnement (2 j)',
   },
   {
     title: 'Excel 2013 : Fonctions avancées',
   },
   {
-    title: 'MS Project 2013 : Introduction<br> (3 j)',
+    title: 'MS Project 2013 : Introduction (3 j)',
   },
   {
-    title: 'MS Project 2013 : Piloter un <br>projet',
+    title: 'MS Project 2013 : Piloter un projet',
   },
   {
     title: 'Word 2013 : Prise en main (1 j)',
   },
   {
-    title: 'Word 2013 : perfectionnement<br> (2 j)',
+    title: 'Word 2013 : perfectionnement (2 j)',
   },
   {
-    title: 'Word 2013 : prise en main <br/>et perfectionnement',
+    title: 'Word 2013 : prise en main et perfectionnement',
   },
 ];
 
 const javaparagraph = [
   {
-    title: '- Programmation JAVA et <br> conception objet Eclipse (5 j) <br />',
+    title: '- Programmation JAVA et conception objet Eclipse (5 j) ',
   },
   {
-    title: '- Développer avec Eclipse (5 j)<br />'
+    title: '- Développer avec Eclipse (5 j)'
   },
   {
-    title: '- Développer avec Eclipse (5 j)<br />',
+    title: '- Développer avec Eclipse (5 j)',
   },
   {
-    title: '- Swing, développement des <br> applications JAVA (5 j)<br />',
+    title: '- Swing, développement des applications JAVA (5 j)',
   },
   {
-    title: '- Développer avec Python (5 j)<br />',
+    title: '- Développer avec Python (5 j)',
   },
   {
-    title: '- Création d’application web <br> d’entreprise avec JEE et Oracle <br> Weblogic (3 j)<br />',
+    title: '- Création d’application web d’entreprise avec JEE et Oracle Weblogic (3 j)',
   },
   {
-    title: '- Création d’application web <br> d’entreprise avec JEE et <br> GLASSFISH (3 j)<br />',
+    title: '- Création d’application web d’entreprise avec JEE et GLASSFISH (3 j)',
   },
   {
-    title: '- Maîtriser Java sans connaitre <br> la programmation orientée objet <br> (5 j)',
+    title: '- Maîtriser Java sans connaitre  la programmation orientée objet (5 j)',
   },
 ];
 
@@ -81,25 +81,25 @@ const Data = [
     title: 'Urbanisation du système <br> d’Information (S.I) (2 j)',
   },
   {
-    title: 'Cobit 5 Foundation certifieré(3 j )',
+    title: 'Cobit 5 Foundation certifieré (3 j )',
   },
   {
-    title: 'Cobit 5 Implémentation certifié <br>(3 j)',
+    title: 'Cobit 5 Implémentation certifié  (3 j)',
   },
   {
-    title: 'Piloter par les tableaux de bord<br> (2 j)',
+    title: 'Piloter par les tableaux de bord (2 j)',
   },
   {
-    title: 'Analyse et conception avec UML<br> 2.0 (3 j)',
+    title: 'Analyse et conception avec UML 2.0 (3 j)',
   },
   {
-    title: 'Plan de continuité et de reprise <br>après sinistre',
+    title: 'Plan de continuité et de reprise après sinistre',
   },
   {
     title: 'Sécurité des SI , état de l’art',
   },
   {
-    title: 'Réaliser un Business Plan<br> réaliste et convaincant',
+    title: 'Réaliser un Business Plan réaliste et convaincant',
   },
 ];
 const lTIL = [
@@ -107,16 +107,16 @@ const lTIL = [
     title: 'ITIL Foundation (3 j)',
   },
   {
-    title: 'ITIL Intermidiate Capability:<br> Opération Support & Analysis<br> (OSA) (5 j)',
+    title: 'ITIL Intermidiate Capability: Opération Support & Analysis (OSA) (5 j)',
   },
   {
-    title: 'ITIL Intermidiate Capability: <br> Service Offering and Agreement<br> (OSA)(5 j)',
+    title: 'ITIL Intermidiate Capability: Service Offering and Agreement (OSA)(5 j)',
   },
   {
-    title: 'ITIL Intermidiate Lifecycle :<br> Service Transition (ST) (5 j)',
+    title: 'ITIL Intermidiate Lifecycle : Service Transition (ST) (5 j)',
   },
   {
-    title: 'ITIL Intermidiate Lifecycle :<br> Service Opération (SO)',
+    title: 'ITIL Intermidiate Lifecycle : Service Opération (SO)',
   },
   {
     title: 'Synthèse du référentiel ITIL (2j)',
@@ -126,34 +126,34 @@ const lTIL = [
 
 const bd = [
   {
-    title: 'Administration avancée de MySQL <br> (2 j)',
+    title: 'Administration avancée de MySQL (2 j)',
   },
   {
-    title: 'Administration base de données <br> Oracle 12c (5 j)',
+    title: 'Administration base de données Oracle 12c (5 j)',
   },
   {
     title: 'Oracle 12c – Les fondamentaux (5 j)',
   },
   {
-    title: 'Sauvegarde et restauration<br> d’Oracle 12c (4 j)',
+    title: 'Sauvegarde et restauration d’Oracle 12c (4 j)',
   },
   {
     title: 'Mise en place d’oracle 12c (2 j)',
   },
   {
-    title: 'Interroger des bases de données <br> avec le langage SQL (3 j)',
+    title: 'Interroger des bases de données avec le langage SQL (3 j)',
   },
   {
     title: 'Administration Oracle 10g 11g (5 j)',
   },
   {
-    title: 'Administrateur base de données <br> Oracle 11g (5 j)',
+    title: 'Administrateur base de données Oracle 11g (5 j)',
   },
   {
     title: 'Oracle Optimisation (3 j)',
   },
   {
-    title: 'Oracle: Débuter avec Oracle, les <br> bases (5 j)',
+    title: 'Oracle: Débuter avec Oracle, les bases (5 j)',
   },
   {
     title: 'Administrer MySQL (5 j)',
@@ -214,7 +214,7 @@ const Home = () => {
             </div>
             <div className="gpt3__features-container">
               {featuresData.map((item, index) => (
-                <Feature key={index} title={<span  dangerouslySetInnerHTML={{ __html: item.title }} />} />
+                <Feature key={index} title={<span dangerouslySetInnerHTML={{ __html: item.title }} />} />
               ))}
             </div>
           </div>

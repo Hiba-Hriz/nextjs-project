@@ -4,16 +4,9 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    
-    margin: 1rem;
-    
-    padding-left: 8rem;
-}
-
-.gpt3__features-container__feature-title {
-    flex: 1;
-    
-    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 6rem;
 }
 
 .gpt3__features-container__feature-title h1 {
@@ -34,16 +27,81 @@
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .gpt3__features-container__feature {
+        width: 180%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 6rem;
+        margin-right: 10rem; 
+    }
     .gpt3__features-container__feature-title h1 {
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
         font-size: 20px; 
         line-height: 24px; 
-        margin-left: 2px;
     }
+   
+}
+@media screen and (min-width: 375px) and (max-width: 424px) {
     .gpt3__features-container__feature {
-        margin-right: 26rem; 
+        width: 110%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 6rem;
+        margin-right: -1rem; 
     }
+    .gpt3__features-container__feature-title h1 {
+        
+   
+        font-size: 20px; 
+        line-height: 24px; 
+    }
+   
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .gpt3__features-container__feature {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 6rem;
+        margin-right: 1rem; 
+    }
+    .gpt3__features-container__feature-title h1 {
+        
+   
+        font-size: 20px; 
+        line-height: 24px; 
+    }
+   
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .gpt3__features-container__feature {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 6rem;
+        margin-right: 1rem; 
+    }
+    .gpt3__features-container__feature-title h1 {
+        
+   
+        font-size: 20px; 
+        line-height: 24px; 
+    }
+   
 }
