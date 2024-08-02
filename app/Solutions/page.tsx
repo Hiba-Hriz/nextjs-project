@@ -219,14 +219,14 @@ const Page = () => {
         
 
 
-        <AnimatedDiv className="container mx-auto mt-8 sm:mt-20 text-black" variants={fadeInUp}>
+        <AnimatedDiv className="container  mt-8 sm:mt-20 text-black" variants={fadeInUp}>
       {sections.map((section, index) => (
         <motion.section
           key={index}
           initial="initial"
           animate="animate"
           variants={fadeInUp}
-          className="py-12 -mx-10 bg-white mb-12 rounded-lg shadow-lg"
+          className="py-12 -mx-8 bg-white mb-12 rounded-lg shadow-lg"
         >
           <AnimatedDiv className="px-4 sm:px-8 lg:px-12" variants={fadeInUp}>
             <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 text-center ">{section.title}</h2>
