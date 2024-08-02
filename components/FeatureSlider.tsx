@@ -17,7 +17,10 @@ const features: Feature[] = [
     title: 'Production et suivi d’atelier',
     description: 'Les groupements d’OF, la planification à capacité finie ou infinie, amont ou aval, le calcul de charges, la gestion des manquants et l’ordonnancement constituent de nombreux outils d’aide au lancement. La distribution du travail dans les ateliers s’effectue au moyen de fiche suiveuse, bon de travail et bon de sortie matière. Le suivi d’atelier par code à barres permet la saisie des temps de présence, des temps passés et des quantités consommées et fabriquées par phase, OF ou groupe d’OF en tenant compte des réservations et équivalences.',
   },
-  
+  {
+    title: 'Maintenance',
+    description: 'Chaque équipement est identifié par un code, un numéro de série, un type et une famille, localisé par un site et un centre, tracé par fournisseur, fabricant, commande et réception fournisseur, date de mise en service et date de fin de garantie, décrit par des commentaires, spécifié par des caractéristiques techniques, illustré par des documents techniques, des photos et des plans associés et structuré sur plusieurs niveaux de nomenclatures.Chaque équipement possède une liste de pièces de rechange et une liste d’opérations d’entretien ou de contrôle, avec pour chacune de ces listes des fréquences de réalisation et un historique des interventions avec leur coût prévu par rapport à un budget et leur coût réalisé en fonction des consommations et des temps passés saisis.',
+  },
   {
     title: 'Qualité',
     description: 'Chaque entrée en stock peut faire l’objet d’un contrôle global qualitatif ou détaillé via la gamme de contrôle, l’échantillonnage et la déclaration de non conformité constatée. Les non conformités potentielles et les actions préventives traitent le risque de non qualité. La gestion de la non conformité permet de créer et valoriser l’action curative, créer et valider les actions correctives, créer les demandes de dérogation client et tracer les demandes de dérogation fournisseur. La notation automatique des fournisseurs analyse le respect des délais, des quantités et la qualité des produits livrés.',
@@ -43,10 +46,6 @@ const features: Feature[] = [
   {
     title: 'Service Client',
     description: 'La description fine des équipements clients, des garanties et contrats de services leur étant associée, la gestion complète des interventions, retours et réparations, ainsi que l’élaboration de circuits de traitements efficaces des demandes vous permettent d’articuler les flux de gestion du Service Client autour d’outils performants et structurants.',
-  },
-  {
-    title: 'Maintenance',
-    description: 'Chaque équipement est identifié par un code, un numéro de série, un type et une famille, localisé par un site et un centre, tracé par fournisseur, fabricant, commande et réception fournisseur, date de mise en service et date de fin de garantie, décrit par des commentaires, spécifié par des caractéristiques techniques, illustré par des documents techniques, des photos et des plans associés et structuré sur plusieurs niveaux de nomenclatures.Chaque équipement possède une liste de pièces de rechange et une liste d’opérations d’entretien ou de contrôle, avec pour chacune de ces listes des fréquences de réalisation et un historique des interventions avec leur coût prévu par rapport à un budget et leur coût réalisé en fonction des consommations et des temps passés saisis.',
   },
   {
     title: 'Plan Industriel et Commercial (PIC)',

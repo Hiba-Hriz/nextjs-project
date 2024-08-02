@@ -22,7 +22,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, content, index }
       <h4 className="font-poppins font-semibold text-gradient text-[30px] leading-[43.4px] mb-1">
         {title}
       </h4>
-      <p className="font-poppins font-normal text-dimWhite text-[25px] leading-[30px]">
+      <p className="font-poppins font-normal text-white text-[23px] leading-[30px] -ml-16 mt-6">
         {content}
       </p>
     </div>
@@ -55,11 +55,11 @@ const Dashboard: React.FC = () => (
   <div className='overflow-hidden'>
     <div style={{ backgroundColor: "#080526" }}>
       <section id="features" className="flex md:flex-row flex-col sm:py-16 py-6">
-        <div className="flex-1 flex justify-center items-start pl-12 pr-1 flex-col">
+        <div className="flex-1 flex justify-center items-start pl-6 sm:pl-12 pr-2 flex-col">
           <h2 className="font-poppins font-semibold xs:text-[18px] text-[40px] text-gradient xs:leading-[76.8px] leading-[66.8px] w-full">
             Offrez-vous la clé du succès avec  Octal ERP pour Etre Rapidement Performant
           </h2>
-          <p className="font-poppins font-normal text-dimWhite text-[25px] leading-[30.8px] max-w-[470px] mt-5">
+          <p className="font-poppins font-normal text-white text-[25px] leading-[30.8px] max-w-[470px] mt-5 pr-4">
             De la conception au SAV, en passant par la relation client (CRM), les achats, la fabrication, les expéditions et la facturation, OCTAL permet de gérer les principales TAL figure parmi les progiciels les plus diffusés et installés sur le marché ORACLE français, ce qui est un gage de fiabilité, de pérennité et d’évolutivité de celui-ci.
           </p>
         </div>
@@ -70,7 +70,7 @@ const Dashboard: React.FC = () => (
         </div>
       </section>
 
-      <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24 sm:py-16 mt-14">
+      <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-6 ">
         <div className="max-container padding-container relative w-full flex justify-between">
           <div className="flex flex-1 lg:min-h-[900px]">
             <Image
