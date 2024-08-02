@@ -16,7 +16,7 @@ const Hero = () => {
 
 
         </div>
-        <div className="h-[99vh] w-full dark:blue dark:bg-black-100  flex 
+        <div className="h-[89vh] w-full dark:blue dark:bg-black-100  flex 
         items-center justify-center absolute top-0 left-0">
       <div className="absolute pointer-events-none
        inset-0 flex items-center justify-center dark:bg-black-100 bg-white
